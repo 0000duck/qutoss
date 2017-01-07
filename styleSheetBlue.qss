@@ -1,0 +1,261 @@
+
+/* For all widgets of same type, or widgets that are the only one of their kind */
+
+QLineEdit, QDoubleSpinBox{
+    border-radius: 5px;
+    background-color: rgb(35, 95, 150);
+    color: rgb(100, 135, 190);
+}
+
+QTreeWidgetItem{
+    height: 300px;
+}
+
+QTreeWidget{
+    background-color: rgb(50, 120, 180);
+    color: rgb(200, 200, 200);
+    selection-background-color: rgb(60, 130, 200);
+    border-radius: 1px;
+}
+
+
+QLineEdit#equationText:hover, QDoubleSpinBox:hover{
+    background-color: rgb(45, 95, 150);
+}
+
+
+QLineEdit#equationText:focus, QDoubleSpinBox:focus{
+    background-color: rgb(45, 95, 150);
+    color: rgb(120, 155, 210);
+}
+
+
+QTabBar::tab{
+    background: rgb(55, 115, 165);
+    color: rgb(130, 180, 230);
+}
+
+
+QTabBar::tab:selected:!only-one {
+    background: qlineargradient(spread:pad, x1: 0, y1:0, x2:0, y2:1.0,
+                          stop:0 rgba(60, 120, 180, 255),
+                          stop:0.8 rgba(65, 125, 190, 255),
+                          stop:1 rgba(70, 130, 200, 255));
+    color: rgb(220,220,220);
+}
+
+
+QTabBar::tab:only-one {
+    background: rgb(50, 110, 180);
+    color: rgb(120, 170, 210);
+}
+
+
+QTabBar::tab:hover:!pressed:!selected {
+  color: rgb(220,220,220);
+}
+
+
+QToolTip {
+  /* anything other than native colors might cause flicker */
+  /*background: rgba(50, 120, 150, 100);*/
+  /*color: rgba(200,200,200,255);*/
+  border-style: none;
+
+}
+
+
+QLabel {
+ color: rgb(90, 125, 180);
+}
+
+
+QWidget#sideTextContainer {
+    background: qlineargradient(spread:pad, x1:0, y1:0, x2:0.08, y2:1.0,
+                        stop:0 rgba(32, 42, 52, 255),
+                        stop:0.12 rgba(35, 51, 65, 255),
+                        stop:0.2 rgba(39, 55, 70, 255),
+                        stop:1 rgba(40, 56, 72, 255));
+
+}
+
+QWidget#tutText1, QWidget#tutText2 {
+    background: rgba(0, 150, 0, 255);
+    border-radius: 10px;
+    border: none;
+}
+
+QTextEdit {
+    background: rgba(0, 0, 0, 0);
+}
+
+
+/*  TABS  */
+QWidget#tabOne, QWidget#tabTwo, QWidget#tabThree {
+    background: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1.0,
+                        stop:0 rgba(34, 75, 115, 255),
+                        stop:0.1 rgba(38, 85, 130, 255),
+                        stop:0.94 rgba(38, 85, 130, 255),
+                        stop:1 rgba(35, 79, 122, 255));
+}
+
+QWidget#simTab {
+    background: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1.0,
+                        stop:0 rgba(32, 75, 100, 255),
+                        stop:0.08 rgba(34, 80, 115, 255),
+                        stop:0.13 rgba(38, 85, 130, 255),
+                        stop:0.94 rgba(38, 85, 130, 255),
+                        stop:1 rgba(35, 80, 125, 255));
+}
+
+
+QWidget#buttonPanel {
+    background: #38649f; /*  rgba(40, 88, 140, 255);*/
+    /*background: rgb(30, 75, 105);*/
+}
+
+
+/*  SPECIFIC WIDGETS  */
+
+QWidget#placementTogglers{
+    margin-left: 50%;
+    margin-right: 50%;
+}
+
+QPushButton#classicalButton{
+    border-image: url(":/images/buttons/classical.png");
+}
+
+QPushButton#classicalButton:hover:!pressed{
+    border-image: url(":/images/buttons/classical_active.png");
+}
+
+QPushButton#playButton{
+    border-image: url(":/images/buttons/play2.png");
+}
+
+QPushButton#playButton:hover:!pressed{
+    border-image: url(":/images/buttons/play_active2.png");
+}
+
+QPushButton#pauseButton{
+    border-image: url(":/images/buttons/pause.png");
+}
+
+QPushButton#pauseButton:hover:!pressed{
+    border-image: url(":/images/buttons/pause_active.png");
+}
+
+QPushButton#switchToBrushButton{
+    border-radius: 10px;
+    border-image: url(":/images/buttons/continuous_dark.png");
+}
+
+QPushButton#switchToBrushButton:hover:!pressed{
+    border-image: url(":/images/buttons/continuous_dark_active.png");
+}
+
+QPushButton#switchToTilesButton{
+    border-radius: 10px;
+    border-image: url(":/images/buttons/discrete_dark.png");
+}
+
+QPushButton#switchToTilesButton:hover:!pressed{
+    border-image: url(":/images/buttons/discrete_dark_active.png");
+}
+
+QPushButton#restartButton{
+    border-image: url(":/images/buttons/restart.png");
+}
+
+QPushButton#restartButton:hover:!pressed{
+    border-image: url(":/images/buttons/restart_active.png");
+}
+
+QPushButton#observeButton{
+    border-image: url(":/images/buttons/observe.png");
+}
+
+QPushButton#observeButton:hover:!pressed{
+    border-image: url(":/images/buttons/observe_active.png");
+}
+
+QPushButton#observeFiller{
+    border-image: url(":/images/buttons/observe_fill.png");
+}
+
+QPushButton#restartFiller{
+    border-image: url(":/images/buttons/restart_fill.png");
+}
+
+
+/* SCROLLBAR */
+QScrollBar{
+    width:scrollbarWidthpx;
+    background: rgba(40, 56, 72, 0);
+    margin: 0px 0px 0px 0px;
+}
+
+QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
+    background: none;
+}
+
+QScrollBar::handle{
+    border-radius: 2px;
+    background: rgba(60, 76, 110, 100);
+}
+
+QScrollBar::handle:hover{
+    background: rgba(65, 85, 125, 255);
+}
+
+
+QScrollBar::add-line:vertical {
+      border: none;
+      background: none;
+      width: 0px;
+      height: 0px;
+}
+
+QScrollBar::sub-line:vertical {
+      border: none;
+      background: none;
+      width: 0px;
+      height: 0px;
+}
+
+
+/* SLIDERS : temp*/
+QSlider::groove:horizontal {
+background: rgba(50, 100, 160, 255);
+height: sliderHeightpx;
+border-radius: borderRadiuspx;
+}
+
+
+QSlider::sub-page:horizontal {
+background: rgb(50, 100, 185);
+height: sliderHeightpx;
+border-radius: borderRadiuspx;
+}
+
+
+QSlider::handle:horizontal {
+/*background: rgba(85, 135, 255, 255);*/
+background: rgba(70, 110, 200, 255);
+width: handleHeightpx;
+height: handleHeightpx;
+margin-top: -halfHandleHeightpx;
+margin-bottom: -halfHandleHeightpx;
+/*border-radius: 5px;*/
+}
+
+QSlider::handle:horizontal:hover {
+background: rgba(100, 150, 255, 255);
+}
+
+
+
+
+
+
